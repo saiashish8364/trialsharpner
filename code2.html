@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <header>
+      <h1>JS For Beginners</h1>
+    </header>
+
+    <section class="container">
+      <form id="my-form">
+        <h1>Add User</h1>
+        <div class="msg"></div>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email">
+        </div>
+        <input class="btn" type="submit" value="Submit">
+      </form>
+
+      <ul id="users"></ul>
+
+       <ul class="items">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+      </ul>
+      <script>
+        const ul=document.querySelector('.items');
+        ul.firstElementChild.textContent='Hello';
+        ul.firstElementChild.innerHTML='<li style="color:MediumSeaGreen">Hello</li>'
+        ul.children[1].innerHTML='<li style="color:yellow">Item 2</li>'
+        const btn=document.querySelector('.btn')
+        btn.addEventListener('click',(e)=>{
+            e.preventDefault();
+            console.log("clicked");
+        });
+        btn.addEventListener('mouseover',(e)=>{
+            e.preventDefault();
+            console.log("mouseovered");
+        });
+        btn.addEventListener('mouseout',(e)=>{
+            e.preventDefault();
+            console.log("mouseout");
+        }); 
+      </script>
+    </section>
+  </body>
+</html>
