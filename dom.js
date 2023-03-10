@@ -6,7 +6,7 @@ headertitle.style.borderBottom="solid 3px #000";
 var ai=document.getElementById("title1")
 ai.style.fontWeight="bold";
 ai.style.color="green";
-var t=document.getElementsByClassName("list-group-item");
+var t=document.getElementsByTagName("li");
 
 for(var i=0;i<t.length;i++)
 {
