@@ -7,7 +7,11 @@ function onsubmit(e){
     var email=document.getElementById("email").value;
     var mobile=document.getElementById("mobile").value;
 
-    localStorage.setItem("Name",name);
-    localStorage.setItem("Email",email);
-    localStorage.setItem("Mobile",mobile);
+    let myobj={
+        Name:name,
+        Email:email,
+        Mobile:mobile
+    };
+    let myobjser=JSON.stringify(myobj);
+    localStorage.setItem("myObj",myobjser)
 }
