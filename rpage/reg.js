@@ -13,5 +13,5 @@ function onsubmit(e){
         Mobile:mobile
     };
     let myobjser=JSON.stringify(myobj);
-    localStorage.setItem("myObj",myobjser)
+    localStorage.setItem(myobj.Email,myobjser);
 }
