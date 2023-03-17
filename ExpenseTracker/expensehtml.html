@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="expense.css">
+  </head>
+  <body>
+    <header>
+      <h1>Expense Tracker Form</h1>
+    </header>
+
+    <section class="container">
+      <form id="my-form">
+        <div>
+          <label for="ammount">Ammount:</label>
+          <input type="text" id="ammount">
+        </div>
+        <div>
+          <label for="description">Description:</label>
+          <input type="text" id="description">
+        </div>
+        <div>
+            <label for="reason">Category:</label>
+            <select name="Resaon" id="reason">
+                <option value="Grocery" >Grocery</option>
+                <option value="Rent" >Rent</option>
+                <option value="Movie" >Movie</option>
+                <option value="Travel" >Travel</option>
+            </select>
+        </div>
+        <input class="btn" type="submit" value="Add Expense">
+      <div>
+            <h3>Expense Details</h3>
+            <ul id="ulist">
+            </ul>
+        </div> 
+    </form>
+    </section>
+       
+
+    <script src="expense.js"></script>
+  </body>
+</html>
