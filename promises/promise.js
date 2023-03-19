@@ -50,4 +50,5 @@ createpost('POST2')
     .then(msg=>{
         console.log(msg)
     })
+    .then(printPost)
 
