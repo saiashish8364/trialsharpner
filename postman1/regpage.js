@@ -28,6 +28,21 @@ function onsubmit(e) {
   localStorage.setItem(myobj.Email, myobjser); //saving in local storage too for checking
   showonscreen(myobj);
 }
+document.addEventListener("DOMContentLoaded", () => {
+  axios
+    .get(
+      "https://crudcrud.com/api/ec68fbc80b9944609a9b73cd65d9881b/appointments"
+    )
+    .then((r) => {
+      for (var i = 0; i < r.data.length; i++) {
+        showonscreen(r.data[i]);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 function showonscreen(myobj) {
   const pe = document.getElementById("ulist");
   const ce = document.createElement("li");
