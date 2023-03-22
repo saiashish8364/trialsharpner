@@ -55,6 +55,11 @@ function showonscreen(myobj) {
   eb.value = "Edit";
   db.onclick = () => {
     localStorage.removeItem(myobj.Email);
+    axios
+      .delete(
+        `https://crudcrud.com/api/ec68fbc80b9944609a9b73cd65d9881b/appointments/${myobj["_id"]}`
+      )
+      .catch((err) => console.log(err));
     pe.removeChild(ce);
   };
   eb.onclick = () => {
