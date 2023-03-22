@@ -24,8 +24,6 @@ function onsubmit(e) {
     .catch((err) => {
       console.log(err);
     });
-  let myobjser = JSON.stringify(myobj);
-  localStorage.setItem(myobj.Email, myobjser); //saving in local storage too for checking
   showonscreen(myobj);
 }
 document.addEventListener("DOMContentLoaded", () => {
@@ -54,7 +52,6 @@ function showonscreen(myobj) {
   eb.type = "button";
   eb.value = "Edit";
   db.onclick = () => {
-    localStorage.removeItem(myobj.Email);
     axios
       .delete(
         `https://crudcrud.com/api/ec68fbc80b9944609a9b73cd65d9881b/appointments/${myobj["_id"]}`
@@ -63,14 +60,26 @@ function showonscreen(myobj) {
     pe.removeChild(ce);
   };
   eb.onclick = () => {
-    var name1 = myobj.Name;
-    var email1 = myobj.Email;
-    var mobile1 = myobj.Mobile;
-    document.getElementById("name").value = name1;
-    document.getElementById("email").value = email1;
-    document.getElementById("mobile").value = mobile1;
+    var ide = myobj["_id"];
+    axios
+      .get(
+        `https://crudcrud.com/api/ec68fbc80b9944609a9b73cd65d9881b/appointments/${ide}`
+      )
+      .then((r) => {
+        var name1 = r.data["Name"];
+        var email1 = r.data["Email"];
+        var mobile1 = r.data["Mobile"];
+        document.getElementById("name").value = name1;
+        document.getElementById("email").value = email1;
+        document.getElementById("mobile").value = mobile1;
+      })
+      .then(
+        axios.delete(
+          `https://crudcrud.com/api/ec68fbc80b9944609a9b73cd65d9881b/appointments/${myobj["_id"]}`
+        )
+      )
+      .catch((err) => console.log(err));
 
-    localStorage.removeItem(myobj.Email);
     pe.removeChild(ce);
   };
   ce.appendChild(db);
