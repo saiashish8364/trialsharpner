@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS For Beginners</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Registration Form</h1>
+    </header>
+
+    <section class="container">
+      <form id="my-form">
+        <h1>User Details</h1>
+
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" />
+        </div>
+        <div>
+          <label for="mobile">Mobile No.:</label>
+          <input type="text" id="mobile" />
+        </div>
+        <button class="btn" id="submitButton">Submit</button>
+        <div>
+          <h3>User Details</h3>
+          <ul id="ulist"></ul>
+        </div>
+      </form>
+    </section>
+
+    <script src="regpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+  </body>
+</html>
