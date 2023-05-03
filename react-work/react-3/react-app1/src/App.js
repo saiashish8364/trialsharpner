@@ -17,12 +17,7 @@ function App(props) {
       <section>
         <UserForm onAdduser={AddUserHandler}></UserForm>
       </section>
-      <section>
-        <pre>
-          <h1>Name : Age</h1>
-        </pre>
-        <UserList users={users}></UserList>
-      </section>
+      <UserList users={users}></UserList>
     </div>
   );
 }

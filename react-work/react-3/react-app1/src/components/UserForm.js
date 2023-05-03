@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./UserForm.css";
 function UserForm(props) {
   let data = [];
   let [userName, setUserName] = useState("");
@@ -59,20 +59,25 @@ function UserForm(props) {
   };
 
   return (
-    <form onSubmit={formSubmitHandler}>
-      <div>
-        <label>
-          <h2>UserName</h2>
-        </label>
-        <input type="text" id="name" onChange={nameChangeHandler}></input>
-        <label>
-          <h2>Age(years)</h2>
-        </label>
-        <input type="number" id="age" onChange={ageChangeHandler}></input>
-        <br />
-        <button type="submit">Add User</button>
-      </div>
-    </form>
+    <div className="form-element">
+      <form onSubmit={formSubmitHandler}>
+        <div>
+          <label>
+            <h2>UserName</h2>
+          </label>
+          <input type="text" id="name" onChange={nameChangeHandler}></input>
+          <label>
+            <h2>Age(years)</h2>
+          </label>
+          <input type="number" id="age" onChange={ageChangeHandler}></input>
+          <br />
+          <br />
+          <button className="btn" type="submit">
+            Add User
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }
 export default UserForm;
