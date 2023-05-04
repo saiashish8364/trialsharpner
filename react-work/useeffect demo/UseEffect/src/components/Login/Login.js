@@ -77,21 +77,20 @@ const Login = (props) => {
             onChange={passwordChangeHandler}
             onBlur={validatePasswordHandler}
           />
-          <br />
-          <div
-            className={`${classes.control} ${
-              collegeNameIsValid === false ? classes.invalid : ""
-            }`}
-          >
-            <label htmlFor="college">College Name</label>
-            <input
-              type="text"
-              id="college"
-              value={enteredCollege}
-              onChange={collegeChangeHandler}
-              onBlur={validateCollegeHandler}
-            />
-          </div>
+        </div>
+        <div
+          className={`${classes.control} ${
+            collegeNameIsValid === false ? classes.invalid : ""
+          }`}
+        >
+          <label htmlFor="college">College Name</label>
+          <input
+            type="text"
+            id="college"
+            value={enteredCollege}
+            onChange={collegeChangeHandler}
+            onBlur={validateCollegeHandler}
+          />
         </div>
         <div className={classes.actions}>
           <Button type="submit" className={classes.btn} disabled={!formIsValid}>
