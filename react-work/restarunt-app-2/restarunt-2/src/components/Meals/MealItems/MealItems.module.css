@@ -1,0 +1,13 @@
+.title {
+  font-family: "Courier New", Courier, monospace;
+}
+.description {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-size: small;
+}
+.price {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: medium;
+}
