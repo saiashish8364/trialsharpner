@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import classes from "./MealForm.module.css";
+import classes from "./PharmacyForm.module.css";
 import CartContext from "../../../Store/cart-context";
-const MealForm = (props) => {
+const PharmacyForm = (props) => {
   let enteredAmount = 0;
   const cartCtx = useContext(CartContext);
   const formChangeHandler = (event) => {
@@ -38,4 +38,4 @@ const MealForm = (props) => {
     </div>
   );
 };
-export default MealForm;
+export default PharmacyForm;

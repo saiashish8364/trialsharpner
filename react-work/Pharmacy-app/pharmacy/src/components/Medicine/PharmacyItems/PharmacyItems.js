@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MealItemList from "./MealItemList";
+import PharmacyItemList from "./PharmacyItemList";
 
 const MealItems = () => {
   const [items, setItems] = useState([
@@ -63,7 +63,7 @@ const MealItems = () => {
           <button onClick={mealSubmitHandler}>Add Product</button>
         </form>
       </div>
-      <MealItemList items={items} />
+      <PharmacyItemList items={items} />
     </>
   );
 };

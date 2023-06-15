@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import MealItems from "./components/Meals/MealItems/MealItems";
+import MealItems from "./components/Medicine/PharmacyItems/PharmacyItems";
 
 import classes from "./App.module.css";
 import Cart from "./components/Cart/Cart";
